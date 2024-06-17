@@ -26,8 +26,8 @@ body{
   background: rgb(0, 0, 0);
 }
 .wrapper{
-  max-width: 80%;
-  padding: 25px 30px;
+  max-width: 600px;
+  padding: 20px 26px;
   overflow: hidden;
   position: relative;
   border-radius: 15px;
@@ -153,7 +153,7 @@ body{
   justify-content: center;
   border-radius: 50%;
   background: rgb(255, 255, 255);
-  box-shadow: 0px 0px 5px yellow;
+  box-shadow: 0px 0px 5px rgb(22, 10, 92);
 }
 .play-pause::before{
   position: absolute;
