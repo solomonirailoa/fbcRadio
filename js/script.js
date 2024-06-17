@@ -30,7 +30,7 @@ function isDarkModeEnabled() {
 window.addEventListener("load", ()=>{
   loadMusic(musicIndex);
   playingSong(); 
-  if isDarkModeEnabled() {
+  if (isDarkModeEnabled()) {
     console.log("Yes, dark mode is enabled");
   }else{
     console.log("No, dark mode is not enabled");
