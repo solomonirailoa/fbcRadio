@@ -1,16 +1,16 @@
 const wrapper = document.querySelector(".wrapper"),
-musicImg = wrapper.querySelector(".img-area img"),
-musicName = wrapper.querySelector(".song-details .name"),
-musicArtist = wrapper.querySelector(".song-details .artist"),
+radioImg = wrapper.querySelector(".img-area img"),
+radioStationName = wrapper.querySelector(".audio-details .name"),
+songTag = wrapper.querySelector(".audio-details .tag"),
 playPauseBtn = wrapper.querySelector(".play-pause"),
 prevBtn = wrapper.querySelector("#prev"),
 nextBtn = wrapper.querySelector("#next"),
 mainAudio = wrapper.querySelector("#main-audio"),
 progressArea = wrapper.querySelector(".progress-area"),
 progressBar = progressArea.querySelector(".progress-bar"),
-musicList = wrapper.querySelector(".radio-list"),
-moreMusicBtn = wrapper.querySelector("#more-music"),
-closemoreMusic = musicList.querySelector("#close");
+radioList = wrapper.querySelector(".radio-list"),
+moreStationsBtn = wrapper.querySelector("#more-stations"),
+closemoreStations = radioList.querySelector("#close");
 
 let musicIndex = Math.floor((Math.random() * allStations.length) + 1);
 isMusicPaused = true;
@@ -21,9 +21,9 @@ window.addEventListener("load", ()=>{
 });
 
 function loadMusic(indexNumb){
-  musicName.innerText = allStations[indexNumb - 1].name;
-  musicImg.src = `images/${allStations[indexNumb - 1].img}`;
-  musicArtist.innerText = allStations[indexNumb - 1].artist;
+  radioStationName.innerText = allStations[indexNumb - 1].name;
+  radioImg.src = `images/${allStations[indexNumb - 1].img}`;
+  songTag.innerText = allStations[indexNumb - 1].artist;
   mainAudio.src = `${allStations[indexNumb - 1].src}`;
 }
 
@@ -167,9 +167,9 @@ mainAudio.addEventListener("ended", ()=>{
 
 //show music list onclick of music icon
 moreMusicBtn.addEventListener("click", ()=>{
-  musicList.classList.toggle("show");
+  radioList.classList.toggle("show");
 });
-closemoreMusic.addEventListener("click", ()=>{
+closemoreStations.addEventListener("click", ()=>{
   moreMusicBtn.click();
 });
 
