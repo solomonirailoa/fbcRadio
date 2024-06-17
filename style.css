@@ -23,7 +23,7 @@ body{
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #1A1A1A;
+  background: rgba(0, 0, 0, 0);
 }
 .wrapper{
   max-width: 600px;
