@@ -23,7 +23,7 @@ window.addEventListener("load", ()=>{
 function loadMusic(indexNumb){
   radioStationName.innerText = allStations[indexNumb - 1].name;
   radioImg.src = `images/${allStations[indexNumb - 1].img}`;
-  songTag.innerText = allStations[indexNumb - 1].artist;
+  songTag.innerText = allStations[indexNumb - 1].tag;
   mainAudio.src = `${allStations[indexNumb - 1].src}`;
 }
 
@@ -176,11 +176,11 @@ closemoreStations.addEventListener("click", ()=>{
 const ulTag = wrapper.querySelector("ul");
 // let create li tags according to array length for list
 for (let i = 0; i < allStations.length; i++) {
-  //let's pass the song name, artist from the array
+  //let's pass the song name, tag from the array
   let liTag = `<li li-index="${i + 1}">
                 <div class="row">
                   <span>${allStations[i].name}</span>
-                  <p>${allStations[i].artist}</p>
+                  <p>${allStations[i].tag}</p>
                 </div>
                 <span id="${allStations[i].src}" class="audio-duration">3:40</span>
                 <audio class="${allStations[i].src}" src="${allStations[i].src}"></audio>
