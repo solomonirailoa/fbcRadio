@@ -1,7 +1,7 @@
 const wrapper = document.querySelector(".wrapper"),
-radioImg = wrapper.querySelector(".img-area img"),
-radioStationName = wrapper.querySelector(".audio-details .name"),
-songTag = wrapper.querySelector(".audio-details .tag"),
+musicImg = wrapper.querySelector(".img-area img"),
+musicName = wrapper.querySelector(".song-details .name"),
+musicArtist = wrapper.querySelector(".song-details .artist"),
 playPauseBtn = wrapper.querySelector(".play-pause"),
 prevBtn = wrapper.querySelector("#prev"),
 nextBtn = wrapper.querySelector("#next"),
@@ -9,8 +9,8 @@ mainAudio = wrapper.querySelector("#main-audio"),
 progressArea = wrapper.querySelector(".progress-area"),
 progressBar = progressArea.querySelector(".progress-bar"),
 radioList = wrapper.querySelector(".radio-list"),
-moreStationsBtn = wrapper.querySelector("#more-stations"),
-closemoreStations = radioList.querySelector("#close");
+moreMusicBtn = wrapper.querySelector("#more-music"),
+closemoreMusic = radioList.querySelector("#close");
 
 let musicIndex = Math.floor((Math.random() * allStations.length) + 1);
 isMusicPaused = true;
@@ -21,9 +21,9 @@ window.addEventListener("load", ()=>{
 });
 
 function loadMusic(indexNumb){
-  radioStationName.innerText = allStations[indexNumb - 1].name;
-  radioImg.src = `images/${allStations[indexNumb - 1].img}`;
-  songTag.innerText = allStations[indexNumb - 1].tag;
+  musicName.innerText = allStations[indexNumb - 1].name;
+  musicImg.src = `images/${allStations[indexNumb - 1].img}`;
+  musicArtist.innerText = allStations[indexNumb - 1].artist;
   mainAudio.src = `${allStations[indexNumb - 1].src}`;
 }
 
@@ -166,21 +166,21 @@ mainAudio.addEventListener("ended", ()=>{
 });
 
 //show music list onclick of music icon
-moreStationsBtn.addEventListener("click", ()=>{
+moreMusicBtn.addEventListener("click", ()=>{
   radioList.classList.toggle("show");
 });
-closemoreStations.addEventListener("click", ()=>{
-  moreStationsBtn.click();
+closemoreMusic.addEventListener("click", ()=>{
+  moreMusicBtn.click();
 });
 
 const ulTag = wrapper.querySelector("ul");
 // let create li tags according to array length for list
 for (let i = 0; i < allStations.length; i++) {
-  //let's pass the song name, tag from the array
+  //let's pass the song name, artist from the array
   let liTag = `<li li-index="${i + 1}">
                 <div class="row">
                   <span>${allStations[i].name}</span>
-                  <p>${allStations[i].tag}</p>
+                  <p>${allStations[i].artist}</p>
                 </div>
                 <span id="${allStations[i].src}" class="audio-duration">3:40</span>
                 <audio class="${allStations[i].src}" src="${allStations[i].src}"></audio>
