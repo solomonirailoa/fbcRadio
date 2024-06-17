@@ -166,11 +166,11 @@ mainAudio.addEventListener("ended", ()=>{
 });
 
 //show music list onclick of music icon
-moreMusicBtn.addEventListener("click", ()=>{
+moreStationsBtn.addEventListener("click", ()=>{
   radioList.classList.toggle("show");
 });
 closemoreStations.addEventListener("click", ()=>{
-  moreMusicBtn.click();
+  moreStationsBtn.click();
 });
 
 const ulTag = wrapper.querySelector("ul");
