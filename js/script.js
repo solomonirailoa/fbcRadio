@@ -15,9 +15,26 @@ closemoreMusic = radioList.querySelector("#close");
 let musicIndex = Math.floor((Math.random() * allStations.length) + 1);
 isMusicPaused = true;
 
+function isDarkModeEnabled() {
+  if (typeof window !== 'undefined' &&
+    typeof window.matchMedia !== 'undefined') {
+
+    const mediaQueryString = '(prefers-color-scheme: dark)';
+
+    return window.matchMedia(mediaQueryString).matches;
+  } else {
+    throw new Error('matchMedia is not supported');
+  }
+}
+
 window.addEventListener("load", ()=>{
   loadMusic(musicIndex);
   playingSong(); 
+  if isDarkModeEnabled() {
+    console.log("Yes, dark mode is enabled");
+  }else{
+    console.log("No, dark mode is not enabled");
+  }
 });
 
 function loadMusic(indexNumb){
