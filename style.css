@@ -22,12 +22,12 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   background: rgb(0, 0, 0);
 }
 .wrapper{
   max-width: 600px;
-  padding: 20px 26px;
+  padding: 15px 23px;
   overflow: hidden;
   position: relative;
   border-radius: 15px;
