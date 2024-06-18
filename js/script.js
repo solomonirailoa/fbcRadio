@@ -180,9 +180,9 @@ for (let i = 0; i < allStations.length; i++) {
   let liTag = `<li li-index="${i + 1}">
                 <div class="row">
                   <span>${allStations[i].name}</span>
-                  <p>${allStations[i].artist}</p>
+                  <p style="font-size: 12px;">${allStations[i].artist}</p>
                 </div>
-                <span id="${allStations[i].src}" class="audio-duration">3:40</span>
+                <span id="${allStations[i].src}" class="audio-duration"> </span>
                 <audio class="${allStations[i].src}" src="${allStations[i].src}"></audio>
               </li>`;
   ulTag.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
