@@ -23,7 +23,7 @@ body{
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: rgba(30, 30, 40);
+  background-image: url('images/fbcBackground.jpg');
 }
 .wrapper{
   max-width: 600px;
